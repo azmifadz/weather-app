@@ -43,7 +43,7 @@ class WeatherDetailsView extends StatelessWidget {
           LocaleKeys.appName.tr(),
         ),
       ),
-      body: Column(
+      body: ListView(
         children: [
           const SizedBox(height: 24),
           Container(
@@ -60,12 +60,14 @@ class WeatherDetailsView extends StatelessWidget {
           ),
           CachedNetworkImage(
             imageUrl: 'https://openweathermap.org/img/wn/$icon@2x.png',
+            height: 100,
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 24),
             child: Text(
               condition.toUpperCase(),
               style: Theme.of(context).textTheme.headlineLarge,
+              textAlign: TextAlign.center,
             ),
           ),
           const Divider(
