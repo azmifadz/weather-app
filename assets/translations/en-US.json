@@ -1,3 +1,4 @@
 {
-  "app_name": "Weather App"
+  "appName": "Weather App",
+  "loading": "Loading..."
 }
